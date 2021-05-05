@@ -1,0 +1,32 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "typeRoots": ["node_modules/@types"],
+    "types": ["reflect-metadata", "jest", "node"],
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app-workspace/*": ["libs/*"],
+      "@app-workspace/assets": ["../../libs/assets"],
+      "@app-workspace/ionic": ["xplat/ionic/index.ts"],
+      "@app-workspace/ionic/*": ["xplat/ionic/*"],
+      "@app-workspace/web": ["xplat/web/index.ts"],
+      "@app-workspace/web/*": ["xplat/web/*"],
+      "@app-workspace/webcomponents": ["libs/webcomponents/src/index.ts"],
+      "@app-workspace/webcomponents/loader": ["dist/libs/webcomponents/loader"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

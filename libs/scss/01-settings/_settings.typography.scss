@@ -1,0 +1,412 @@
+/*_____                                       _
+|_   _|                                     | |
+  | |_   _ _ __   ___   __ _ _ __ __ _ _ __ | |__  _   _
+  | | | | | '_ \ / _ \ / _` | '__/ _` | '_ \| '_ \| | | |
+  | | |_| | |_) | (_) | (_| | | | (_| | |_) | | | | |_| |
+  \_/\__, | .__/ \___/ \__, |_|  \__,_| .__/|_| |_|\__, |
+      __/ | |           __/ |         | |           __/ |
+     |___/|_|          |___/          |_|          |___/*/
+
+/*____ ____ _  _ ___ ____
+|___ |  | |\ |  |  [__
+|    |__| | \|  |  ___]*/
+
+// $fonts-dir: "../fonts/" !default;
+
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("/assets/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("/assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url("/assets/fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins-Bold.woff";
+  src: url("/assets/fonts/Poppins-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/fonts/Poppins-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/*------------------------------------*\
+  FONT STYLES
+\*------------------------------------*/
+
+$font-styles: (
+  regular: (
+    font-family: "Poppins-Regular",
+    font-weight: 400,
+    font-style: normal,
+  ),
+  light: (
+    font-family: "Poppins-Light",
+    font-weight: 300,
+    font-style: normal,
+  ),
+  medium: (
+    font-family: "Poppins-Medium",
+    font-weight: 500,
+    font-style: normal,
+  ),
+  bold: (
+    font-family: "Poppins-Bold",
+    font-weight: 700,
+    font-style: normal,
+  ),
+);
+
+/*------------------------------------*\
+  FONT SIZES
+\*------------------------------------*/
+
+$font-sizes: (
+  h1: (
+    font-size: 36,
+    line-height: 1.2,
+  ),
+  h2: (
+    font-size: 28,
+    line-height: 1.2,
+  ),
+  h3: (
+    font-size: 20,
+    line-height: 1.2,
+  ),
+  h4: (
+    font-size: 18,
+    line-height: 1.2,
+  ),
+  h5: (
+    font-size: 16,
+    line-height: 1.2,
+  ),
+  h6: (
+    font-size: 14,
+    line-height: 1.2,
+  ),
+  subtitle1: (
+    font-size: 18,
+    line-height: 1.2,
+  ),
+  subtitle2: (
+    font-size: 16,
+    line-height: 1.2,
+  ),
+  subtitle3: (
+    font-size: 16,
+    line-height: 1.2,
+  ),
+  subtitle4: (
+    font-size: 14,
+    line-height: 1.2,
+    letter-spacing: 0.015em,
+  ),
+  subtitle5: (
+    font-size: 14,
+    line-height: 1.2,
+    letter-spacing: 0.015em,
+  ),
+  body1: (
+    font-size: 16,
+    line-height: 1.5,
+    letter-spacing: 0.015em,
+  ),
+  body2: (
+    font-size: 14,
+    line-height: 1.5,
+    letter-spacing: 0.015em,
+  ),
+  body3: (
+    font-size: 12,
+    line-height: 1.5,
+    letter-spacing: 0.015em,
+  ),
+  body4: (
+    font-size: 12,
+    line-height: 1.5,
+    letter-spacing: 0.015em,
+  ),
+  body5: (
+    font-size: 12,
+    line-height: 1.5,
+    letter-spacing: 0.015em,
+  ),
+);
+
+/*
+___ ____ _  _ ___    ____ ___ _   _ _    ____ ____
+ |  |___  \/   |     [__   |   \_/  |    |___ [__
+ |  |___ _/\_  |     ___]  |    |   |___ |___ ___]
+*/
+
+$text-styles: (
+  (h1, regular, auna-black, center),
+  (h1, regular, auna-black, left),
+  (h1, regular, auna-grey-100, left),
+  (h1, regular, auna-grey-100, center),
+  (h1, regular, auna-grey-80, center),
+  (h1, regular, auna-grey-80, left),
+  (h1, regular, auna-interactive, center),
+  (h1, regular, auna-interactive, left),
+  (h1, regular, auna-error, center),
+  (h1, regular, auna-error, left),
+  (h1, regular, auna-brand1, center),
+  (h1, regular, auna-brand1, left),
+  (h1, regular, auna-white, center),
+  (h1, regular, auna-white, left),
+  (h2, light, auna-black, center),
+  (h2, light, auna-black, left),
+  (h2, light, auna-grey-100, left),
+  (h2, light, auna-grey-100, center),
+  (h2, light, auna-grey-80, center),
+  (h2, light, auna-grey-80, left),
+  (h2, light, auna-interactive, center),
+  (h2, light, auna-interactive, left),
+  (h2, light, auna-error, center),
+  (h2, light, auna-error, left),
+  (h2, light, auna-brand1, center),
+  (h2, light, auna-brand1, left),
+  (h2, light, auna-white, center),
+  (h2, light, auna-white, left),
+  (h3, regular, auna-black, center),
+  (h3, regular, auna-black, left),
+  (h3, regular, auna-grey-100, center),
+  (h3, regular, auna-grey-100, left),
+  (h3, regular, auna-grey-80, center),
+  (h3, regular, auna-grey-80, left),
+  (h3, regular, auna-interactive, center),
+  (h3, regular, auna-interactive, left),
+  (h3, regular, auna-error, center),
+  (h3, regular, auna-error, left),
+  (h3, regular, auna-brand1, center),
+  (h3, regular, auna-brand1, left),
+  (h3, regular, auna-white, center),
+  (h3, regular, auna-white, left),
+  (h4, regular, auna-black, center),
+  (h4, regular, auna-black, left),
+  (h4, regular, auna-grey-100, center),
+  (h4, regular, auna-grey-100, left),
+  (h4, regular, auna-grey-80, center),
+  (h4, regular, auna-grey-80, left),
+  (h4, regular, auna-interactive, center),
+  (h4, regular, auna-interactive, left),
+  (h4, regular, auna-error, center),
+  (h4, regular, auna-error, left),
+  (h4, regular, auna-brand1, center),
+  (h4, regular, auna-brand1, left),
+  (h4, regular, auna-white, center),
+  (h4, regular, auna-white, left),
+  (h5, regular, auna-black, center),
+  (h5, regular, auna-black, left),
+  (h5, regular, auna-grey-100, center),
+  (h5, regular, auna-grey-100, left),
+  (h5, regular, auna-grey-80, center),
+  (h5, regular, auna-grey-80, left),
+  (h5, regular, auna-interactive, center),
+  (h5, regular, auna-interactive, left),
+  (h5, regular, auna-error, center),
+  (h5, regular, auna-error, left),
+  (h5, regular, auna-brand1, center),
+  (h5, regular, auna-brand1, left),
+  (h5, regular, auna-white, center),
+  (h5, regular, auna-white, left),
+  (h6, medium, auna-black, center),
+  (h6, medium, auna-black, left),
+  (h6, medium, auna-grey-100, center),
+  (h6, medium, auna-grey-100, left),
+  (h6, medium, auna-grey-80, center),
+  (h6, medium, auna-grey-80, left),
+  (h6, medium, auna-interactive, center),
+  (h6, medium, auna-interactive, left),
+  (h6, medium, auna-error, center),
+  (h6, medium, auna-error, left),
+  (h6, medium, auna-brand1, center),
+  (h6, medium, auna-brand1, left),
+  (h6, medium, auna-white, center),
+  (h6, medium, auna-white, left),
+  (subtitle1, regular, auna-black, center),
+  (subtitle1, regular, auna-black, left),
+  (subtitle1, regular, auna-grey-100, center),
+  (subtitle1, regular, auna-grey-100, left),
+  (subtitle1, regular, auna-grey-80, center),
+  (subtitle1, regular, auna-grey-80, left),
+  (subtitle1, regular, auna-interactive, center),
+  (subtitle1, regular, auna-interactive, left),
+  (subtitle1, regular, auna-error, center),
+  (subtitle1, regular, auna-error, left),
+  (subtitle1, regular, auna-brand1, center),
+  (subtitle1, regular, auna-brand1, left),
+  (subtitle1, regular, auna-white, center),
+  (subtitle1, regular, auna-white, left),
+  (subtitle2, medium, auna-black, center),
+  (subtitle2, medium, auna-black, left),
+  (subtitle2, medium, auna-grey-100, center),
+  (subtitle2, medium, auna-grey-100, left),
+  (subtitle2, medium, auna-grey-80, center),
+  (subtitle2, medium, auna-grey-80, left),
+  (subtitle2, medium, auna-interactive, center),
+  (subtitle2, medium, auna-interactive, left),
+  (subtitle2, medium, auna-error, center),
+  (subtitle2, medium, auna-error, left),
+  (subtitle2, medium, auna-brand1, center),
+  (subtitle2, medium, auna-brand1, left),
+  (subtitle2, medium, auna-white, center),
+  (subtitle2, medium, auna-white, left),
+  (subtitle3, regular, auna-black, center),
+  (subtitle3, regular, auna-black, left),
+  (subtitle3, regular, auna-grey-100, center),
+  (subtitle3, regular, auna-grey-100, left),
+  (subtitle3, regular, auna-grey-80, center),
+  (subtitle3, regular, auna-grey-80, left),
+  (subtitle3, regular, auna-interactive, center),
+  (subtitle3, regular, auna-interactive, left),
+  (subtitle3, regular, auna-error, center),
+  (subtitle3, regular, auna-error, left),
+  (subtitle3, regular, auna-brand1, center),
+  (subtitle3, regular, auna-brand3, left),
+  (subtitle3, regular, auna-brand3, center),
+  (subtitle3, regular, auna-brand1, left),
+  (subtitle3, regular, auna-white, center),
+  (subtitle3, regular, auna-white, left),
+  (subtitle4, medium, auna-black, center),
+  (subtitle4, medium, auna-black, left),
+  (subtitle4, medium, auna-grey-100, center),
+  (subtitle4, medium, auna-grey-100, left),
+  (subtitle4, medium, auna-grey-80, center),
+  (subtitle4, medium, auna-grey-80, left),
+  (subtitle4, medium, auna-interactive, center),
+  (subtitle4, medium, auna-interactive, left),
+  (subtitle4, medium, auna-error, center),
+  (subtitle4, medium, auna-error, left),
+  (subtitle4, medium, auna-brand1, center),
+  (subtitle4, medium, auna-brand1, left),
+  (subtitle4, medium, auna-white, center),
+  (subtitle4, medium, auna-white, left),
+  (subtitle5, regular, auna-black, center),
+  (subtitle5, regular, auna-black, left),
+  (subtitle5, regular, auna-grey-100, center),
+  (subtitle5, regular, auna-grey-100, left),
+  (subtitle5, regular, auna-grey-80, center),
+  (subtitle5, regular, auna-grey-80, left),
+  (subtitle5, regular, auna-interactive, center),
+  (subtitle5, regular, auna-interactive, left),
+  (subtitle5, regular, auna-error, center),
+  (subtitle5, regular, auna-error, left),
+  (subtitle5, regular, auna-brand1, center),
+  (subtitle5, regular, auna-brand1, left),
+  (subtitle5, regular, auna-white, center),
+  (subtitle5, regular, auna-white, left),
+  (body1, light, auna-black, center),
+  (body1, light, auna-black, left),
+  (body1, light, auna-grey-100, center),
+  (body1, light, auna-grey-100, left),
+  (body1, light, auna-grey-80, center),
+  (body1, light, auna-grey-80, left),
+  (body1, light, auna-interactive, center),
+  (body1, light, auna-interactive, left),
+  (body1, light, auna-error, center),
+  (body1, light, auna-error, left),
+  (body1, light, auna-brand1, center),
+  (body1, light, auna-brand1, left),
+  (body1, light, auna-white, center),
+  (body1, light, auna-white, left),
+  (body2, light, auna-black, center),
+  (body2, light, auna-black, left),
+  (body2, light, auna-grey-100, center),
+  (body2, light, auna-grey-100, left),
+  (body2, light, auna-grey-80, center),
+  (body2, light, auna-grey-80, left),
+  (body2, light, auna-interactive, center),
+  (body2, light, auna-interactive, left),
+  (body2, light, auna-error, center),
+  (body2, light, auna-error, left),
+  (body2, light, auna-brand1, center),
+  (body2, light, auna-brand1, left),
+  (body2, light, auna-white, center),
+  (body2, light, auna-white, left),
+  (body3, medium, auna-black, center),
+  (body3, medium, auna-black, left),
+  (body3, medium, auna-grey-100, center),
+  (body3, medium, auna-grey-100, left),
+  (body3, medium, auna-grey-80, center),
+  (body3, medium, auna-grey-80, left),
+  (body3, medium, auna-interactive, center),
+  (body3, medium, auna-interactive, left),
+  (body3, medium, auna-error, center),
+  (body3, medium, auna-error, left),
+  (body3, medium, auna-brand1, center),
+  (body3, medium, auna-brand1, left),
+  (body3, medium, auna-white, center),
+  (body3, medium, auna-white, left),
+  (body4, regular, auna-black, center),
+  (body4, regular, auna-black, left),
+  (body4, regular, auna-grey-100, center),
+  (body4, regular, auna-grey-100, left),
+  (body4, regular, auna-grey-80, center),
+  (body4, regular, auna-grey-80, left),
+  (body4, regular, auna-interactive, center),
+  (body4, regular, auna-interactive, left),
+  (body4, regular, auna-error, center),
+  (body4, regular, auna-error, left),
+  (body4, regular, auna-brand1, center),
+  (body4, regular, auna-brand1, left),
+  (body4, regular, auna-white, center),
+  (body4, regular, auna-white, left),
+  (body5, light, auna-black, center),
+  (body5, light, auna-black, left),
+  (body5, light, auna-grey-100, center),
+  (body5, light, auna-grey-100, left),
+  (body5, light, auna-grey-80, center),
+  (body5, light, auna-grey-80, left),
+  (body5, light, auna-interactive, center),
+  (body5, light, auna-interactive, left),
+  (body5, light, auna-error, center),
+  (body5, light, auna-error, left),
+  (body5, light, auna-brand1, center),
+  (body5, light, auna-brand1, left),
+  (body5, light, auna-brand2, Center),
+  (body5, light, auna-brand2, Left),
+  (body5, light, auna-white, center),
+  (body5, light, auna-white, left)
+);

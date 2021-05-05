@@ -1,0 +1,36 @@
+.button-tray {
+  display: flex;
+  flex-direction: row;
+  height:100%;
+}
+
+.button-tray .item {
+  padding: 0.8em;
+  flex-grow: 1;
+  display: flex;
+  width:0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-tray .item-ap-result-error {
+  padding: 0.5em;
+  flex-grow: 1;
+  display: flex;
+  width:0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-tray .item-login {
+  padding: 0.1em;
+  flex-grow: 1;
+  display: flex;
+  width:0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-tray .item  auna-image{
+  margin-top:3px;
+}

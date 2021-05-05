@@ -1,0 +1,21 @@
+@use "sass:map";
+@import "../01-settings/settings.colors";
+
+ion-footer{
+  position:initial;
+  background-color: map.get($colors, "auna-white");
+}
+
+  .footer-button {
+    align-items: center;
+    margin: -2px 14px -2px 14px;
+  }
+
+  .ios .footer-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .footer-button-appointment{
+    margin: -2px 19px -2px 19px;
+  }
+

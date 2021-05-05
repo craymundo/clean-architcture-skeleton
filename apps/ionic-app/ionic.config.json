@@ -1,0 +1,20 @@
+{
+  "name": "Auna App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "appId": "com.auna.uat.appinnova",
+  "appName": "Auna App",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "backgroundColor": "#00b0ca",
+      "launchShowDuration": 4000,
+      "splashFullScreen": true,
+      "splashImmersive": true
+    }
+  }
+}

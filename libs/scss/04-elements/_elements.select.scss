@@ -1,0 +1,65 @@
+@use "sass:map";
+@import "../01-settings/_settings.colors";
+
+:root {
+  ion-select {
+    max-width: 100%;
+    justify-content: left;
+    align-self: center;
+    border: 1px solid map.get($colors, "auna-grey-60");
+    border-radius: 4px;
+    justify-content: space-between;
+    height: 48px;
+    padding: 0 16px;
+  }
+  ion-select.error {
+    border: 1px solid map.get($colors, "auna-error") !important;
+  }
+
+  ion-select::part(placeholder) {
+    font-size: 14px;
+    color: map.get($colors, "auna-grey-100");
+    letter-spacing: 0.015em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    opacity: 1 !important;
+    font-family: "Poppins-Regular";
+  }
+
+  /* Set the text color */
+  ion-select::part(text) {
+    color: map.get($colors, "auna-black");
+    font-family: "Poppins-Regular";
+    font-style: normal;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    opacity: 1 !important;
+    letter-spacing: 0.015em;
+  }
+
+  /* Set the icon color and opacity */
+  /* Set the icon color and opacity */
+  ion-select::part(icon) {
+    color: map.get($colors, "auna-interactive");
+    opacity: 1;
+    padding: 3px 3px 2px 3px !important;
+  }
+
+  ion-select.error::part(icon) {
+    color: map.get($colors, "auna-error");
+    opacity: 1;
+    padding: 3px 3px 2px 3px !important;
+  }
+
+  ion-select::part(thePartName) {
+    opacity: 1;
+    font-weight: normal;
+    font-size: 5px;
+  }
+}
+
+ion-select.error::part(placeholder) {
+  color: map.get($colors, "auna-black");
+}

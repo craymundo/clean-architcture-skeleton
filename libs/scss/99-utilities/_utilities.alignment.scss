@@ -1,0 +1,57 @@
+
+.centered {
+    justify-content: center;
+  }
+
+.tx-left{
+  text-align:left;
+}
+
+.tx-center{
+  text-align: center;
+}
+
+.tx-right{
+  text-align: end;
+}
+
+.center-flex{
+  display: flex;
+  justify-content: center;
+}
+
+.center-stepper {
+  font-size: 18px;
+  line-height: 22px;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.center{
+  margin:0 auto;
+}
+
+
+.flex-center{
+  align-content: center;
+  display: flex;
+  align-items: center;
+}
+.inline{
+      display: inline;
+}
+.stickyTab {
+  top:24px;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.center_alignment_text_space{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.button-2column{
+  display: inline-flex;
+  flex-direction: row-reverse;
+}

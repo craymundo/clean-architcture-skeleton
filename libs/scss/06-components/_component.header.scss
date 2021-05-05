@@ -1,0 +1,85 @@
+//header
+ion-toolbar {
+  left: 0;
+  right: 0;
+  --padding-top: 0px;
+  --padding-start: 0px;
+  --padding-end: 0px;
+}
+
+.toolbar-header{
+  --background: transparent !important;
+  --ion-color-base: transparent !important;
+}
+
+ion-header ion-toolbar:first-of-type {
+  padding-top: 24px;
+}
+
+.header-ios ion-toolbar:first-of-type {
+  padding-top: 0px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+  --border-width: 0px;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  height: 56px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.header .back {
+  position: absolute;
+  left: 18px;
+  height: 20px;
+  width: 20px;
+  min-height: 0px;
+  min-width: 0px;
+}
+
+.header .avatar {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 16px;
+  top: 12px;
+}
+
+.header .logo {
+  width: 93px;
+  height: 20px;
+  left: calc(50% - 93px / 2 - 0.5px);
+  top: calc(50% - 20px / 2);
+}
+
+.header .cancel {
+  position: absolute;
+  right: 18px;
+}
+
+.separator {
+  display: inherit;
+  height: 1px;
+  left: 0px;
+  right: 0px;
+  top: calc(50% - 1px / 2 + 27.5px);
+  background-color: #e4e5ed;
+}
+
+.header-md::after {
+  background: none !important;
+}
+
+.header-title {
+  position: absolute; 
+  z-index: -1
+}

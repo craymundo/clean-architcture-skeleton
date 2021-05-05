@@ -1,0 +1,11 @@
+
+@import 'btnDefault';
+
+.btnDefault-green{
+  @extend .btnDefault;
+  background-color:$colorGreen;
+  border:none;
+  margin-top:2em;
+  min-width: 10em;
+  width: 100%;
+}

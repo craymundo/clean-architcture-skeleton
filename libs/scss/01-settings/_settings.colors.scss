@@ -1,0 +1,107 @@
+/*_____       _
+/  __ \     | |
+| /  \/ ___ | | ___  _ __ ___
+| |    / _ \| |/ _ \| '__/ __|
+| \__/\ (_) | | (_) | |  \__ \
+ \____/\___/|_|\___/|_|  |___/*/
+
+$color-blue: #0047b6;
+$color-dark: #000;
+$color-grey: #4a4a4a;
+$color-red: #f00;
+$color-yellow: #ffbb40;
+$color-body: $color-dark;
+
+/*____ _   _ ____ ___ ____ _  _
+[__   \_/  [__   |  |___ |\/|
+___]   |   ___]  |  |___ |  |*/
+
+$blue: #50a1ff;
+$indigo: #6610f2;
+$purple: #926dde;
+$pink: #e83e8c;
+$red: #ff4954;
+$orange: #ffbe00;
+$yellow: #ffba00;
+$green: #3cd458;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+/*____ ____ _  _ ___ ____ _  _ ___
+|    |  | |\ |  |  |___  \/   |
+|___ |__| | \|  |  |___ _/\_  |*/
+
+$color-primary: $blue;
+$color-secondary: #e9ecf0;
+$color-success: $green;
+$color-info: $purple;
+$color-warning: $yellow;
+$color-danger: $red;
+$color-light: #f8f9fa;
+$color-dark: #191919;
+
+/*___  ____ ____ _  _ ____ ____ ____ _  _ _  _ ___
+|__] |__| |    |_/  | __ |__/ |  | |  | |\ | |  \
+|__] |  | |___ | \_ |__] |  \ |__| |__| | \| |__/*/
+
+$color-bg-lightest: #fcfdfe;
+$color-bg-lighter: #f9fafb;
+$color-bg-light: #f5f6f7;
+$color-bg-body: #fff;
+$color-bg-dark: #191919;
+$color-bg-gray: #fafbfb;
+
+/*___ ____ _  _ ___
+ |  |___  \/   |
+ |  |___ _/\_  |*/
+
+$color-text-darker: #323d47;
+$color-text-dark: #555;
+$color-text: #757575;
+$color-text-light: #999;
+$color-text-lighter: #bfc5ca;
+$color-text-lightest: #d3d3d3;
+$color-text-secondary: #929daf;
+$color-text-disable: #a5b3c7;
+$color-text-placeholder: #c9ccce;
+$color-title: $color-text-darker;
+$color-subtitle: $color-text-light;
+
+/* AUNA-COLORS */
+$colors: (
+  auna-interactive: #009AB2,
+  auna-brand1: #c2df0a,
+  auna-brand2: #ff6900,
+  auna-brand3: #0050b5,
+  auna-black: #131336,
+  auna-grey-100: #697191,
+  auna-grey-80: #b8bcd5,
+  auna-grey-60: #e4e5ed,
+  auna-grey-40: #f1f2f7,
+  auna-grey-20: #f6f8fa,
+  auna-complementary1: #e6f6f9,
+  auna-complementary2: #f3f9ce,
+  auna-complementary3: #fff0e6,
+  auna-complementary4: #e6eef8,
+  auna-error: #e42525,
+  auna-aqua: #14b8b8,
+  auna-blue: #314a9f,
+  auna-darkgray: #333,
+  auna-gray: #f0f0f0,
+  auna-green-hover: #00b555,
+  auna-green-secondary: #33ba6a,
+  auna-green: #00a94f,
+  auna-lightgray: #fafafa,
+  auna-mediumdarkgray: #9c9c9c,
+  auna-mediumgray: #e5e5e5,
+  auna-primary-hover: #ffa513,
+  auna-primary: #ff9100,
+  auna-purple: #8246a0,
+  auna-secondary-hover: #63b9f0,
+  auna-secondary: #55aced,
+  auna-white: #fff,
+  auna-error-hover: #e64b4b,
+  auna-orange: #ffaa01,
+  auna-sea-hover: #0bc1dc,
+  auna-sea-pressed: #029fb7,
+) !default;

@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <access origin="*" />
+  
+  <feature name="CallNumber">
+    <param name="android-package" value="mx.ferreyra.callnumber.CFCallNumber"/>
+  </feature>
+
+  <feature name="ActionSheet">
+    <param name="android-package" value="nl.xservices.plugins.actionsheet.ActionSheet"/>
+  </feature>
+
+  <feature name="CordovaHttpPlugin">
+    <param name="android-package" value="com.silkimen.cordovahttp.CordovaHttpPlugin"/>
+  </feature>
+
+  <feature name="AppAvailability">
+    <param name="android-package" value="com.ohh2ahh.appavailability.AppAvailability"/>
+  </feature>
+
+  <feature name="Notification">
+    <param name="android-package" value="org.apache.cordova.dialogs.Notification"/>
+  </feature>
+
+  <feature name="File">
+    <param name="android-package" value="org.apache.cordova.file.FileUtils"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="FileOpener2">
+    <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2"/>
+  </feature>
+
+  <feature name="FileTransfer">
+    <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer"/>
+  </feature>
+
+  <feature name="FirebaseAnalytics">
+    <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseAnalyticsPlugin"/>
+    <param name="onload" value="$ANALYTICS_COLLECTION_ENABLED"/>
+  </feature>
+
+  <feature name="FirebaseConfig">
+    <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseConfigPlugin"/>
+  </feature>
+
+  <feature name="FirebaseCrashlytics">
+    <param name="android-package" value="uk.co.reallysmall.cordova.plugin.firebase.crashlytics.FirebaseCrashlyticsPlugin"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="IRoot">
+    <param name="android-package" value="de.cyberkatze.iroot.IRoot"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="NetworkStatus">
+    <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager"/>
+  </feature>
+
+  <feature name="CDVOrientation">
+    <param name="android-package" value="cordova.plugins.screenorientation.CDVOrientation"/>
+  </feature>
+
+  <feature name="SecureStorage">
+    <param name="android-package" value="com.crypho.plugins.SecureStorage"/>
+  </feature>
+
+  <feature name="StatusBar">
+    <param name="android-package" value="org.apache.cordova.statusbar.StatusBar"/>
+    <param name="onload" value="true"/>
+  </feature>
+
+  <feature name="LaunchNavigator">
+    <param name="android-package" value="uk.co.workingedge.phonegap.plugin.LaunchNavigatorPlugin"/>
+  </feature>
+
+  
+</widget>

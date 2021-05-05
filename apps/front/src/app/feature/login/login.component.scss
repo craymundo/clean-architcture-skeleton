@@ -1,0 +1,172 @@
+
+@mixin breakpoint($point) {
+  @if $point==desktop {
+    @media (min-width: 1024px) {
+      @content;
+    }
+  }
+
+  @else if $point==mobile {
+    @media (max-width: 1023px) {
+      @content;
+    }
+  }
+}
+
+/*MOBILE CSS*/
+ .authContainer {
+   height: 100%;
+   overflow: hidden;
+   .row_auth {
+     height: 100%;
+     .animation_desk {
+       display: none;
+     }
+     .auth_login {
+       display: flex;
+       flex-direction: column;
+       flex-basis: 100%;
+       flex: 1;
+       height: 100%;
+       .container_login {
+         margin-top: auto;
+         margin-bottom: auto;
+         @media (min-width: 320px) and (max-width: 359px) {
+             padding-left: 24px;
+             padding-right: 24px;
+             }
+         .title {
+           font-family: Poppins;
+           font-style: normal;
+           font-weight: normal;
+           font-size: 24px;
+           line-height: 30px;
+           align-items: center;
+           text-align: center;
+           color: #131336;
+           margin-bottom: 32px;
+           margin-top: 0;
+         }
+         .logo {
+           margin-bottom: 40px;
+           width: fit-content;
+           margin-left: auto;
+           margin-right: auto;
+         }
+         .form-container {
+           width: 312px;
+           margin: auto;
+           @media (min-width: 320px) and (max-width: 359px) {
+             width:100%;  
+             }
+           .field_email, .field_password {
+             margin-top: 24px;
+             margin-bottom: 24px;
+           }
+           .field_options {
+             display: flex;
+             justify-content: space-between;
+             margin-bottom: 24px;
+           }
+           .field_forgot{
+             display: flex;
+             align-content: center;
+             align-items: center;
+             align-self: center;
+             height: 22px;
+           }
+           .row_register {
+             margin-top: 32px;
+             .register__container {
+               width: fit-content;
+               margin: auto;
+               h2 {
+                 font-family: Poppins;
+                 font-size: 14px;
+                 font-style: normal;
+                 font-weight: 400;
+                 line-height: 16px;
+                 letter-spacing: .015em;
+                 text-align: right;
+                 color: #131336;
+               }
+               a {
+                 color: #00b0ca;
+               }
+             }
+           }
+         }
+       }
+     }
+     .footer_login {
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+       position: relative;
+       width: 100%;
+       border-top: 1px solid #e4e5ed;
+       .column-whastapp, .column-emergency {
+         border-right: 1px solid #e4e5ed;
+         height: 56px;
+         display: flex;
+         flex: 1;
+         cursor:pointer;
+         .container-whatsapp, .container-emergency {
+          display: flex;
+          flex-basis: 100%;
+          align-items: center;
+          align-content: center;
+          align-self: center;
+          cursor: pointer;
+           button {
+             cursor: pointer;
+             border: 0px;
+             background: transparent;
+             display: flex;
+             margin-left: auto;
+             margin-right: auto;
+             .containertext{
+               cursor:pointer;
+             }
+           }
+           span.icon-whatsapp,
+           span.icon-ambulancia {
+             top: 2px;
+             position: relative;
+             cursor: pointer;
+
+           }
+         }
+       }
+     }
+   }
+ }
+ 
+/*DESKTOP RESPONSIVE*/
+@include breakpoint(desktop) {
+  .authContainer{
+    .row_auth{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      .animation_desk{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        max-width: 616px;
+        width: 45.2941176471vw;
+        .full-height{
+        height:100vh;
+        }
+      }
+      .auth_login {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+@import '../module';
+@import 'textTitle';
+
+.textTitle-white{
+    @extend .textTitle;
+    color:white;
+}
+

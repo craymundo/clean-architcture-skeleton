@@ -1,0 +1,33 @@
+/*_   _ _   _ _ _ _   _             _   _ _     _ _     _ _ _ _
+| | | | | (_) (_) | (_)           | | | (_)   (_) |   (_) (_) |
+| | | | |_ _| |_| |_ _  ___  ___  | | | |_ ___ _| |__  _| |_| |_ _   _
+| | | | __| | | | __| |/ _ \/ __| | | | | / __| | '_ \| | | | __| | | |
+| |_| | |_| | | | |_| |  __/\__ \ \ \_/ / \__ \ | |_) | | | | |_| |_| |
+ \___/ \__|_|_|_|\__|_|\___||___/  \___/|_|___/_|_.__/|_|_|_|\__|\__, |
+                                                                  __/ |
+                                                                 |___/*/
+
+.display-flex{
+    display: flex;
+}
+
+.display-block{
+    display: block;
+}
+
+.position-absolute{
+    position: absolute;
+}
+
+.only-mobile {
+  display: block;
+  @include media-bkp-up('lg') {
+    display: none;
+  }
+}
+.only-desk {
+  display: none;
+  @include media-bkp-up('lg') {
+    display: block;
+  }
+}

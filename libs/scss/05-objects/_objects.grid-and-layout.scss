@@ -1,0 +1,64 @@
+// Grids & Layout
+
+// CONTAINERS
+.container,
+.container-left,
+.container-right {
+  margin-left: auto;
+  margin-right: auto;
+
+  // XXS
+    @include media-bkp-up('xxs') { // min-width: 0
+      width: $container-xxs; // 100%
+    }
+  // XS
+    @include media-bkp-up('xs') { // min-width: 312px
+      width: $container-xs; // 312px
+    }
+  // SM
+    @include media-bkp-up('sm') { // min-width: 600px
+      width: $container-sm; // 568px
+    }
+  // MD
+    @include media-bkp-up('md') { // min-width: 768px
+      width: $container-md; // 688px
+    }
+  // LG
+    @include media-bkp-up('lg') { // min-width: 1024px
+      width: $container-lg; // 744px
+    }
+  // XL
+    @include media-bkp-up('xl') { // min-width: 1280px
+      width: $container-xl; // 1032px
+    }
+  // XXL
+    @include media-bkp-up('xxl') { // min-width: 1600px
+      width: $container-xxl; // 1320px
+    }
+}
+
+.container-left {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.container-right {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+// Paddings
+  .container-padding-x {
+    @include media-bkp-up('xxs') {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    @include media-bkp-up('xs') {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    @include media-bkp-up('md') {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }

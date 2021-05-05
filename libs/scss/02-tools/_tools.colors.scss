@@ -1,0 +1,18 @@
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+@mixin color-style($name) {
+  $name-class: nth($name, 1);
+  $color: nth($name, 2);
+
+  .#{$name-class} {
+    color: #{$color};
+  }
+}
+
+@mixin generate-colors {
+  @each $color in $colors {
+    @include color-style($color);
+  }
+}

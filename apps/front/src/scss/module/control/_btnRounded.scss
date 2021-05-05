@@ -1,0 +1,13 @@
+@import '../module';
+
+.btnRounded{
+    padding:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    border-radius: 10px;
+    color:white;
+}
+
+.btnRounded.isDisabled{
+    opacity: 0.4;
+}

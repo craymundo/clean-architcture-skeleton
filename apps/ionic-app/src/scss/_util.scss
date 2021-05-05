@@ -1,0 +1,90 @@
+.util-talign-center{
+  text-align: center;
+  
+}
+
+
+$widths: 0;
+
+@while $widths < 800 {
+    $widths : $widths + 25;
+    .util-width-#{$widths}{
+      width:#{$widths}px;
+    }
+}
+
+
+@for $amount from 0 to 30 {
+
+  //for all sides
+   .util-padall-#{$amount}{
+     padding:#{$amount}px;
+   }
+   .util-marall-#{$amount}{
+     margin:#{$amount}px;
+   }
+
+
+   //for margin
+   .util-martop-#{$amount}{
+     margin-top:#{$amount}px;
+   }
+
+   .util-marbot-#{$amount}{
+     margin-bottom:#{$amount}px;
+   }
+
+   .util-marleft-#{$amount}{
+    margin-left:#{$amount}px;
+  }
+
+  .util-marright-#{$amount}{
+    margin-right:#{$amount}px;
+  }
+
+  .util-marvert-#{$amount}{
+    margin:#{$amount}px 0px;
+  }
+
+
+  .util-marhori-#{$amount}{
+    margin:0px #{$amount}px;
+  }
+
+
+   //for padding
+   .util-padtop-#{$amount}{
+    margin-top:#{$amount}px;
+  }
+
+  .util-padbot-#{$amount}{
+    margin-bottom:#{$amount}px;
+  }
+
+  .util-padleft-#{$amount}{
+    margin-left:#{$amount}px;
+  }
+
+  .util-padright-#{$amount}{
+    margin-right:#{$amount}px;
+  }
+
+
+  .util-padvert-#{$amount}{
+    margin:#{$amount}px 0px;
+  }
+
+
+  .util-padhori-#{$amount}{
+    margin:0px #{$amount}px;
+  }
+
+
+  
+
+}
+
+
+.util-expanded{
+  flex-grow: 1;
+}

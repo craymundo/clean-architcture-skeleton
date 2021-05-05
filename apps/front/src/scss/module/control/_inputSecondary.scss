@@ -1,0 +1,17 @@
+@import '../module';
+
+.inputSecondary {
+    width: 100%;
+    padding: .8em;
+    border: 0;
+    border-bottom: 1px solid $borderColor;
+    color: $textMuted;
+}
+
+.inputSecondary:focus {
+    outline-width: 0;
+}
+
+.inputSecondary::placeholder{
+    font-family: $fontFamily;
+ }

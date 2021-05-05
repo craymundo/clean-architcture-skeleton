@@ -1,0 +1,5 @@
+@mixin generate-icons {
+  .#{$icon-prefix} {
+    font-family: $icon-ff, $icon-ff;
+  }
+}

@@ -1,0 +1,9 @@
+@import '../module';
+
+.btnRounded-green{
+  @extend .btnRounded;
+  background-color:$colorGreen;
+  border:none;
+  margin-top:2em;
+  min-width: 10em;
+}

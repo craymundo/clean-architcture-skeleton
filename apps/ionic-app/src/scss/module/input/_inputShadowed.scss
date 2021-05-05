@@ -1,0 +1,32 @@
+@import '../module';
+
+.inputShadowed {
+  box-shadow: 0px 1px 6px #29000017;
+  flex: 1;
+}
+
+
+.inputShadowed--input {
+  font-weight: 500;
+  width: 100%;
+  color: $grayInput;
+  font-size: 12px;
+  padding: 0px 5px;
+  outline: none;
+  text-align: center;
+  border: none;
+  background-color: white;
+  height: 32px;
+}
+
+.inputShadowed--input:disabled{
+  opacity:$opacityDisabled;
+}
+
+
+.inputShadowed--underline {
+  height: 3px;
+  background: $fallbackRedColor;
+  background: $gradientSolid;
+  border-radius: 15px;
+}

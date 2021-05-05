@@ -1,0 +1,10 @@
+.link {
+  color: $textMuted;
+  cursor: pointer;
+  text-decoration: inherit;
+  margin-top: 5px;
+}
+
+.link:visited {
+    color: $textMuted;
+}

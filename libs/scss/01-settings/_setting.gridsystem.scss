@@ -1,0 +1,142 @@
+
+$grid-columns: 12 !default;
+$gap: 1px;
+.child {
+    background-color: violet;
+    height: 4rem;
+}
+
+.contenedor {
+    width: 321px;
+}
+
+.grid, [class*="grid-auto-"] {
+  display: grid;
+  grid-gap: var(--grid-gap, 0);
+}
+
+.grid {
+  --grid-cols: #{$grid-columns};
+  grid-template-columns: repeat(var(--grid-cols), 1fr);
+
+  > * {
+    grid-column-end: span var(--grid-cols);
+  }
+}
+
+.grid-auto-xs, .grid-auto-sm, .grid-auto-md, .grid-auto-lg, .grid-auto-xl, .grid-auto-xxl  { // auto-sized grid
+  grid-template-columns: repeat(auto-fit, minmax(var(--col-width), var(--col-width)));
+  column-gap: $gap;
+}
+
+.grid-auto-xs { --col-width: 72px; }
+.grid-auto-sm { --col-width: 64px; }
+.grid-auto-md { --col-width: 72px; }
+.grid-auto-lg { --col-width: 40px; }
+.grid-auto-xl { --col-width: 64px; }
+.grid-auto-xxl { --col-width: 88px; }
+
+.grid-auto-cols { // cols = same size
+  grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+}
+
+@for $i from 1 through $grid-columns {
+  .column-#{$i}  { grid-column-end: span #{$i}; }
+  .col-start-#{$i} { grid-column-start: #{$i}; }
+  .col-end-#{$i+1} { grid-column-end: #{$i+1}; }
+}
+
+.col-start { grid-column-start: 1; }
+.col-end { grid-column-end: -1; }
+
+// breakpoints
+$breakpoints: (
+  xs: 200px, 
+  sm: 600px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1600px
+) !default;
+
+@mixin breakpoint($breakpoint) {
+  @media (min-width: map-get($map: $breakpoints, $key: $breakpoint)) { @content; }
+}
+
+@include breakpoint(xs) {
+  .grid-auto-xs { --col-width: 72px; column-gap : 8px; }
+  .contenedor {
+    width: 312px;
+  }
+  @for $i from 1 through 4 {
+    .column-#{$i}\@xs  { grid-column-end: span #{$i}; }
+    .col-start-#{$i}\@xs { grid-column-start: #{$i}; }
+    .col-end-#{$i+1}\@xs { grid-column-end: #{$i+1}; }
+  }
+
+}
+
+@include breakpoint(sm) {
+  .grid-auto-xs { --col-width: 64px; column-gap : 8px; }
+  .child {background-color: yellow;}
+  .contenedor {
+    width: 568px;
+  }
+  @for $i from 1 through $grid-columns {
+    .column-#{$i}\@sm  { grid-column-end: span #{$i}; }
+    .col-start-#{$i}\@sm { grid-column-start: #{$i}; }
+    .col-end-#{$i+1}\@sm { grid-column-end: #{$i+1}; }
+  }
+}
+
+@include breakpoint(md) {
+  .grid-auto-md{ --col-width: 72px;  column-gap : 16px;}
+  .child {background-color: blue;}
+  .contenedor {
+    width: 688px;
+  }
+  @for $i from 1 through $grid-columns {
+    .column-#{$i}\@md  { grid-column-end: span #{$i}; }
+    .col-start-#{$i}\@md { grid-column-start: #{$i}; }
+    .col-end-#{$i+1}\@md { grid-column-end: #{$i+1}; }
+  }
+}
+
+@include breakpoint(lg) {
+  .grid-auto-lg { --col-width: 40px;  column-gap : 24px; }
+  .child {background-color: gold;}
+  .contenedor {
+    width: 744px;
+  }
+  @for $i from 1 through $grid-columns {
+    .column-#{$i}\@lg  { grid-column-end: span #{$i}; }
+    .col-start-#{$i}\@lg { grid-column-start: #{$i}; }
+    .col-end-#{$i+1}\@lg { grid-column-end: #{$i+1}; }
+  }
+}
+
+@include breakpoint(xl) {
+  .child {background-color: black;}
+  .grid-auto-xl { --col-width: 64px;  column-gap : 24px; }
+  .contenedor {
+    width: 1032px;
+  }
+  @for $i from 1 through $grid-columns {
+    .column-#{$i}\@xl  { grid-column-end: span #{$i}; }
+    .col-start-#{$i}\@xl { grid-column-start: #{$i}; }
+    .col-end-#{$i+1}\@xl { grid-column-end: #{$i+1}; }
+  }
+}
+
+@include breakpoint(xxl) {
+    .grid-auto-xxl { --col-width: 88px; column-gap : 24px;}
+    .child {background-color: beige;}
+    .contenedor {
+        width: 1320px;
+      }
+    @for $i from 1 through $grid-columns {
+      .column-#{$i}\@xxl  { grid-column-end: span #{$i}; }
+      .col-start-#{$i}\@xxl { grid-column-start: #{$i}; }
+      .col-end-#{$i+1}\@xxl { grid-column-end: #{$i+1}; }
+    }
+  }

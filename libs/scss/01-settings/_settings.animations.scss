@@ -1,0 +1,42 @@
+/*___        _                 _   _
+ / _ \      (_)               | | (_)
+/ /_\ \_ __  _ _ __ ___   __ _| |_ _  ___  _ __  ___
+|  _  | '_ \| | '_ ` _ \ / _` | __| |/ _ \| '_ \/ __|
+| | | | | | | | | | | | | (_| | |_| | (_) | | | \__ \
+\_| |_/_| |_|_|_| |_| |_|\__,_|\__|_|\___/|_| |_|___/*/
+
+$transition-duration: 0.3s;
+$easing: cubic-bezier(0.23, 1, 0.32, 1);
+
+.ion-loading {
+  background-color: #fff;
+  opacity: 0.9 !important;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 9999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  // ion-backdrop {
+  //   background-color: #fff;
+  //   opacity: 0.9 !important;
+  // }
+  .loading-wrapper {
+    background-image: url("/assets/gifs/loader.gif");
+    background-size: 70px 70px;
+    height: 70px;
+    width: 70px;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    animation: fadein 0.2s ease-in alternate forwards;
+  
+  }
+
+  @keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

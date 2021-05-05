@@ -1,0 +1,54 @@
+// Containers Helpers
+.container-vertical {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.container-vertical .top {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-row-middle {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.container-middle {
+  display: flex;
+
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-center-vert {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.link-bottom {
+  bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+.button-tray {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-tray .item {
+  padding: 0.1em;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,27 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    // "typeRoots": ["./node_modules/@types"],
+    "lib": ["es2018", "dom"],
+    "baseUrl": "./",
+    "paths": {
+      "@auna-workspace/*": ["../../libs/*"],
+      "@auna-workspace/assets": ["../../libs/*"],
+      "@auna-workspace/ionic": ["../../xplat/ionic/index.ts"],
+      "@auna-workspace/ionic/*": ["../../xplat/ionic/*"],
+      "@auna-workspace/web": ["../../xplat/web/index.ts"],
+      "@auna-workspace/web/*": ["../../xplat/web/*"],
+      "@angular/*": ["../../node_modules/@angular/*"]
+    }
+  }
+}

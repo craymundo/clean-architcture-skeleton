@@ -1,0 +1,445 @@
+{
+  "version": 1,
+  "projects": {
+    "libs": {
+      "root": "libs",
+      "sourceRoot": "libs",
+      "projectType": "library",
+      "prefix": "app-workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "testing/jest.libs.config.js",
+            "tsConfig": "testing/tsconfig.libs.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "testing/test-setup.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "testing/tsconfig.libs.json",
+              "testing/tsconfig.libs.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "xplat": {
+      "root": "xplat",
+      "sourceRoot": "xplat",
+      "projectType": "library",
+      "prefix": "app-workspace",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "testing/jest.xplat.config.js",
+            "tsConfig": "testing/tsconfig.xplat.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "testing/test-setup.ts"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "testing/tsconfig.xplat.json",
+              "testing/tsconfig.xplat.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ionic-app": {
+      "root": "apps/ionic-app/",
+      "sourceRoot": "apps/ionic-app/src",
+      "projectType": "application",
+      "prefix": "app-workspace",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "apps/ionic-app/www",
+            "index": "apps/ionic-app/src/index.html",
+            "main": "apps/ionic-app/src/main.ts",
+            "polyfills": "apps/ionic-app/src/polyfills.ts",
+            "tsConfig": "apps/ionic-app/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "apps/ionic-app/src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/assets/",
+                "output": "./assets/"
+              }
+            ],
+            "styles": [
+              {
+                "input": "apps/ionic-app/src/theme/variables.scss"
+              },
+              {
+                "input": "apps/ionic-app/src/global.scss"
+              }
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/ionic-app/src/environments/environment.ts",
+                  "with": "apps/ionic-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            },
+            "ci": {
+              "progress": false
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "ionic-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ionic-app:build:production"
+            },
+            "ci": {
+              "progress": false
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "ionic-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/ionic-app/src/test.ts",
+            "polyfills": "apps/ionic-app/src/polyfills.ts",
+            "tsConfig": "apps/ionic-app/tsconfig.spec.json",
+            "karmaConfig": "apps/ionic-app/karma.conf.js",
+            "styles": [],
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "apps/ionic-app/src/",
+                "output": "/"
+              },
+              {
+                "glob": "**/*",
+                "input": "apps/ionic-app/src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "libs/assets/",
+                "output": "./assets/"
+              }
+            ]
+          },
+          "configurations": {
+            "ci": {
+              "progress": false,
+              "watch": false
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/ionic-app/tsconfig.app.json",
+              "apps/ionic-app/tsconfig.spec.json",
+              "apps/ionic-app/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "ionic-cordova-build": {
+          "builder": "@ionic/angular-toolkit:cordova-build",
+          "options": {
+            "browserTarget": "ionic-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ionic-app:build:production"
+            }
+          }
+        },
+        "ionic-cordova-serve": {
+          "builder": "@ionic/angular-toolkit:cordova-serve",
+          "options": {
+            "cordovaBuildTarget": "ionic-app:ionic-cordova-build",
+            "devServerTarget": "ionic-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "cordovaBuildTarget": "ionic-app:ionic-cordova-build:production",
+              "devServerTarget": "ionic-app:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "front": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/front",
+      "sourceRoot": "apps/front/src",
+      "prefix": "app-workspace",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/front",
+            "index": "apps/front/src/index.html",
+            "main": "apps/front/src/main.ts",
+            "polyfills": "apps/front/src/polyfills.ts",
+            "tsConfig": "apps/front/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/front/src/favicon.ico",
+              "apps/front/src/assets",
+              {
+                "glob": "**/*",
+                "input": "libs/assets",
+                "output": "assets/"
+              }
+            ],
+            "styles": [
+              "apps/front/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/front/src/environments/environment.ts",
+                  "with": "apps/front/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "front:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "front:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "front:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/front/tsconfig.app.json",
+              "apps/front/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/front/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/front/jest.config.js",
+            "tsConfig": "apps/front/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/front/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "webcomponents": {
+      "projectType": "library",
+      "schematics": {
+        "@nxext/stencil:component": {
+          "style": "scss",
+          "storybook": false
+        }
+      },
+      "root": "libs/webcomponents",
+      "sourceRoot": "libs/webcomponents/src",
+      "architect": {
+        "build": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/webcomponents/stencil.config.ts"
+          }
+        },
+        "test": {
+          "builder": "@nxext/stencil:test",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/webcomponents/stencil.config.ts"
+          }
+        },
+        "e2e": {
+          "builder": "@nxext/stencil:e2e",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/webcomponents/stencil.config.ts"
+          }
+        },
+        "serve": {
+          "builder": "@nxext/stencil:build",
+          "options": {
+            "projectType": "library",
+            "configPath": "libs/webcomponents/stencil.config.ts",
+            "serve": true,
+            "watch": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nstudio/xplat"
+  },
+  "schematics": {
+    "@nrwl/workspace": {
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/cypress": {
+      "cypress-project": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/react": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      },
+      "storybook-configuration": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/web": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/node": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nx-plugin": {
+      "plugin": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/nest": {
+      "application": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/express": {
+      "application": {
+        "linter": "eslint"
+      },
+      "library": {
+        "linter": "eslint"
+      }
+    },
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  }
+}

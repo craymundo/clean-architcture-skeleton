@@ -1,0 +1,62 @@
+/*_____           _       _____         _
+|_   _|         | |     |_   _|       | |
+  | | ___   ___ | |___    | | _____  _| |_
+  | |/ _ \ / _ \| / __|   | |/ _ \ \/ / __|
+  | | (_) | (_) | \__ \   | |  __/>  <| |_
+  \_/\___/ \___/|_|___/   \_/\___/_/\_\__|*/
+
+@function str-first-letter($str) {
+  @return str-slice($str, 0, 1);
+}
+
+@mixin font-style($name) {
+  @if map-has-key($font-styles, $name) {
+    $styleProps: map-get($font-styles, $name);
+    @each $prop, $value in $styleProps {
+      #{$prop}: $value;
+    }
+  } @else {
+    @error "Unknown `#{$name}` in $font-styles.";
+  }
+}
+
+@mixin font-size($name) {
+  @if map-has-key($font-sizes, $name) {
+    $sizeProps: map-get($font-sizes, $name);
+    @each $prop, $value in $sizeProps {
+      #{$prop}: $value;
+    }
+  } @else {
+    @error "Unknown #{$name} in $font-sizes.";
+  }
+}
+
+// @input (H1, Book, auna-black, Center)
+// @output H1BlackR
+@mixin text-style($name) {
+  $size: nth($name, 1);
+  $style: nth($name, 2);
+  $color: nth($name, 3);
+  $align: nth($name, 4);
+
+  $alias-color: #{to-upper-case(str-slice($color, 6, 6))}#{str-slice(
+      $color,
+      7,
+      str-length($color)
+    )};
+
+  $class-name: #{$size}#{$alias-color}#{str-first-letter($align)};
+
+  .#{$class-name} {
+    @include font-style($style);
+    @include font-size($size);
+    text-align: to-lower-case($align);
+    color: color($color);
+  }
+}
+
+@mixin generate-text-styles {
+  @each $style in $text-styles {
+    @include text-style($style);
+  }
+}

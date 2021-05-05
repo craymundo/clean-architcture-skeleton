@@ -1,0 +1,32 @@
+// 01. Settings
+@import '01-settings/settings.config';
+@import '01-settings/settings.global';
+@import '01-settings/settings.z-layers';
+@import '01-settings/settings.animations';
+@import '01-settings/settings.breakpoints';
+@import '01-settings/settings.colors';
+// @import '01-settings/settings.spacing';
+@import '01-settings/settings.typography';
+@import '01-settings/settings.core';
+@import '01-settings/settings.icons';
+
+// 02. Tools
+@import '02-tools/tools.animations';
+@import '02-tools/tools.buttons';
+@import '02-tools/tools.clearfix';
+@import '02-tools/tools.colors';
+@import '02-tools/tools.forms';
+@import '02-tools/tools.grid';
+@import '02-tools/tools.hidden';
+@import '02-tools/tools.image';
+@import '02-tools/tools.navbar';
+@import '02-tools/tools.on-event';
+@import '02-tools/tools.placeholder';
+@import '02-tools/tools.spacing';
+@import '02-tools/tools.string';
+@import '02-tools/tools.text';
+@import '02-tools/tools.icons';
+@import '02-tools/tools.margins';
+
+// 06. Tools
+@import '06-components/component.footer';

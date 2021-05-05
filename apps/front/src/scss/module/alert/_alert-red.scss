@@ -1,0 +1,6 @@
+@import '../module';
+
+.alert-red{
+  @extend .alert;
+  background-color:rgb(192, 49, 49);
+}

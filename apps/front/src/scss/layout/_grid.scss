@@ -1,0 +1,23 @@
+.row{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@for $i from 1 through 12{
+    $width: ($i/12) * 100%;
+    .col-#{$i}{
+        width:$width;
+        padding:$gutter $gutter;
+    }
+}
+
+@media only screen and (min-width: 45em){
+    @for $i from 1 through 12{
+      $width: ($i/12) * 100%;
+      .col-md-#{$i}{
+         width:$width;
+        padding:$gutter $gutter;
+      }
+    }
+}

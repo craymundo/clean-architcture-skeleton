@@ -1,0 +1,36 @@
+@use "sass:map";
+@import "../01-settings/_settings.colors";
+
+.inputOptCode {
+  width: 40px;
+  margin-right: 16px;
+  height: 31px;
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid map.get($colors, "auna-grey-100");
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: map.get($colors, "auna-black");
+  display: inline-block;
+  border-radius: 0;
+}
+
+ion-input {
+  --padding-end: 0px;
+  --padding-start: 0px;
+}
+
+.sc-ion-input-ios-h {
+  --padding-end: 0px;
+}
+
+.inputOptCode.activeInput {
+  border-bottom-color: map.get($colors, "auna-interactive") !important;
+}
+
+.inputOptCode.errorInput {
+  border-bottom: 1px solid map.get($colors, "auna-error") !important;
+}

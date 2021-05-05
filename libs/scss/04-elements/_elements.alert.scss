@@ -1,0 +1,57 @@
+@use "sass:map";
+@import "../01-settings/_settings.colors";
+
+:root {
+  ion-alert {
+    font-family: "Poppins-Regular" !important;
+  }
+
+  .separator-obejcts {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  button[aria-checked="true"] .alert-radio-label {
+    color: map.get($colors, "auna-interactive") !important;
+  }
+
+  button[aria-checked="true"] .alert-radio-inner {
+    border-color: map.get($colors, "auna-interactive") !important;
+  }
+
+  .alert-radio-label {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .alert-button {
+    color: map.get($colors, "auna-interactive");
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .alert-translucent .alert-wrapper {
+    background: #f9f9f9 !important;
+  }
+
+  .alert-button.ion-activated {
+    background-color: map.get($colors, "auna-complementary1") !important;
+  }
+
+  ion-backdrop {
+    --backdrop-opacity: 0.7;
+  }
+  #alert-1-hdr {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.015em;
+  }
+}

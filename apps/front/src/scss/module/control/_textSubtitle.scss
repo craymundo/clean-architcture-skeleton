@@ -1,0 +1,11 @@
+.subtitle{
+    font-size: 0.9rem;
+    margin-bottom: .75rem;
+    font-weight: 400;
+    color: $textMuted;
+}
+
+.subtitle-center {
+    @extend .subtitle;
+    text-align: center;
+}

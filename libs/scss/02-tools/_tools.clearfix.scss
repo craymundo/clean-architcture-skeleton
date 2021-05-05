@@ -1,0 +1,20 @@
+/*_____           _       _____ _                  __ _
+|_   _|         | |     /  __ \ |                / _(_)
+  | | ___   ___ | |___  | /  \/ | ___  __ _ _ __| |_ ___  __
+  | |/ _ \ / _ \| / __| | |   | |/ _ \/ _` | '__|  _| \ \/ /
+  | | (_) | (_) | \__ \ | \__/\ |  __/ (_| | |  | | | |>  <
+  \_/\___/ \___/|_|___/  \____/_|\___|\__,_|_|  |_| |_/_/\_\*/
+
+// Mixin to drop micro clearfix into a selector. Further reading:
+// http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+//
+// .usage {
+//   @include clearfix();
+// }
+@mixin clearfix() {
+  &::after {
+    content: '' !important;
+    display: block !important;
+    clear: both !important;
+  }
+}
